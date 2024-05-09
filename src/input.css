@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+	font-family: "ubuntuBold";
+	src: url("../assets/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+	font-family: "ubuntuMedium";
+	src: url("../assets/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+	font-family: "ubuntuRegular";
+	src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+body {
+	font-family: "ubuntuRegular";
+}
+p {
+	font-size: 16px;
+}
+
+nav {
+	background-image: url(../assets/images/bg-sidebar-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50vw;
+
+}
+@media (min-width: 768px) {
+	nav {
+		background-image: url(../assets/images/bg-sidebar-desktop.svg);
+		height: auto;
+		border-radius: 10px;
+		background-position: bottom ;
+		
+	}
+}
+nav ul li {
+	@apply  text-secondry-White border rounded-full w-8 h-8 flex justify-center items-center cursor-pointer;
+	font-family: "ubuntuBold";
+}
+nav ul li.active {
+	@apply bg-primary-Lightblue text-primary-Marineblue;
+}
+.step_one {
+	@apply flex flex-col py-2;
+}
+.step_one label {
+	@apply text-primary-Marineblue;
+}
+.step_one input {
+	@apply border border-secondry-Lightgray p-2 rounded-md focus-within:outline-none;
+}
+/* Hide the inputs arrows  */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+	appearance: none;
+}
+.plan article.active, .plan article:hover {
+	@apply bg-secondry-Magnolia border-2 border-secondry-Coolgray;
+}
+.card.active {
+	@apply bg-secondry-Lightgray border-primary-Marineblue;
+}
+@media (min-width: 768px) {
+	main {
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

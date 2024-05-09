@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <!-- Css file  -->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+
+  </head>
+
+  <body class="bg-secondry-Magnolia md:grid justify-center items-center md:h-screen">
+
+<main class="md:w-[100vh] md:h-auto bg-secondry-White md:p-4 md:rounded-md md:justify-between">
+    <!-- Sidebar start -->
+      <nav class="p-7">
+        <ul class="bullets flex justify-center gap-3 md:gap-5 pt-7 md:flex-col">
+          <div class="flex gap-4 items-center">
+            <li class="active">1</li>
+            <div class="max-md:hidden">
+              <span class="text-secondry-Coolgray uppercase">Step 1</span><br>
+              <p class="text-secondry-White uppercase">Your info</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <li>2</li>
+            <div class="max-md:hidden">
+              <span class="text-secondry-Coolgray uppercase">Step 2</span><br>
+              <p class="text-secondry-White uppercase">Select plan</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <li>3</li>
+            <div class="max-md:hidden">
+              <span class="text-secondry-Coolgray uppercase">Step 3</span><br>
+              <p class="text-secondry-White uppercase">Add-ons</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <li>4</li>
+            <div class="max-md:hidden">
+              <span class="text-secondry-Coolgray uppercase">Step 4</span><br>
+              <p class="text-secondry-White uppercase">Summary</p>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <section>
+    <section
+      class="box bg-secondry-White p-6 w-[90%] m-auto rounded-xl absolute top-[6.5rem] left-[50%] translate-x-[-50%] transition-all scale-0 duration-200 md:static md:w-auto md:translate-x-0 md:m-0"> 
+      <h2 class="text-3xl font-bold text-primary-Marineblue my-3">Personal info</h2>
+      <p class="text-secondry-Coolgray mb-5">
+        Please provide your name, email address, and phone number.
+      </p>
+      <div class="step_one">
+        <div class="flex justify-between items-center">
+          <label for="name">Name</label>
+          <p class="text-primary-Strawberryred font-semibold text-sm error_name"></p>
+        </div>
+        <input id="name" type="text" name="name" placeholder="e.g. Stephen King">
+      </div>
+      <div class="step_one">
+        <div class="flex justify-between items-center">
+          <label for="email">Email Address</label>
+          <p class="text-primary-Strawberryred font-semibold text-sm error_email"></p>
+        </div>
+        <input id="email" type="email" name="Email Address" placeholder="e.g. stephenking@lorem.com">
+      </div>
+      <div class="step_one">
+        <div class="flex justify-between items-center">
+          <label for="phone">Phone Number</label>
+          <p class="text-primary-Strawberryred font-semibold text-sm error_phone"></p>
+        </div>
+        <input id="phone" type="number" name="name" placeholder="e.g. +1 234 567 890">
+      </div>
+    </section>
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+    <section id="step_one"
+      class="box md:static md:w-auto md:translate-x-0 md:m-0 bg-secondry-White p-6 w-[90%] m-auto rounded-xl absolute top-[6.5rem] left-[50%] translate-x-[-50%] transition-all scale-0 duration-200">
+      <h2 class="text-3xl font-bold text-primary-Marineblue my-3">Select your plan</h2>
+      <p class="text-secondry-Coolgray mb-5">
+        You have the option of monthly or yearly billing.
+      </p>
+      <section class="plan md:flex md:gap-2">
+        <article data-plan="Arcade" class="flex md:flex-col md:w-36 md:p-5 gap-2 p-3 border mb-2 cursor-pointer rounded-md active">
+          <img class="w-8" src="./assets/images/icon-arcade.svg" alt="Arcade">
+          <div>
+            <h4 class="text-primary-Purplishblue font-semibold">Arcade</h4>
+            <strong class="block text-secondry-Coolgray">$9/mo</strong>
+            <span class="text-primary-Purplishblue text-sm md:hidden">2 months free</span>
+          </div>
+        </article>
+        <article data-plan="Advanced" class="flex md:flex-col md:w-36 md:p-5 gap-2 p-3 border mb-2 cursor-pointer rounded-md">
+          <img class="w-8" src="./assets/images/icon-advanced.svg" alt="Advanced">
+          <div>
+            <h4 class="text-primary-Purplishblue font-semibold">Advanced</h4>
+            <strong class="block text-secondry-Coolgray">$12/mo</strong>
+            <span class="text-primary-Purplishblue text-sm md:hidden ">2 months free</span>
+          </div>
+        </article>
+        <article data-plan="Pro" class="flex md:flex-col md:w-36 md:p-5 gap-2 p-3 border mb-2 cursor-pointer rounded-md ">
+          <img class="w-8" src="./assets/images/icon-pro.svg" alt="icon-pro">
+          <div>
+            <h4 class="text-primary-Purplishblue font-semibold">Pro</h4>
+            <strong class="block text-secondry-Coolgray">$15/mo</strong>
+            <span class="text-primary-Purplishblue text-sm md:hidden">2 months free</span>
+          </div>
+        </article>
+      </section>
+
+      <div class="flex gap-2 bg-secondry-Magnolia p-2 justify-center items-center rounded-md">
+        <label id="month" class="font-bold text-secondry-Coolgray">Monthly</label>
+        <div class="switching w-11 border rounded-xl border-primary-Marineblue h-6 relative  bg-primary-Lightblue">
+          <input type="checkbox" id="switchBtn"
+            class="absolute z-10 left-0 top-0 right-0 bottom-0 opacity-0 cursor-pointer">
+          <span class="slider absolute left-0 top-[1px] w-5 h-5 rounded-full bg-secondry-White"></span>
+        </div>
+        <label id="year" class="text-primary-Purplishblue font-bold">Yearly</label>
+      </div>
+
+    </section>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <section
+      class="box md:hidden md:static md:w-auto md:translate-x-0 md:m-0 bg-secondry-White p-6 w-[90%] m-auto rounded-xl absolute top-[6.5rem] left-[50%] translate-x-[-50%]  transition-all scale-0 duration-200">
+      <h2 class="text-3xl font-bold text-primary-Marineblue my-3">Pick add-ons</h2>
+      <p class="text-secondry-Coolgray mb-5">
+        Add-ons help enhance your gaming experience.
+      </p>
+      <div class="card  border p-4 flex justify-between items-center rounded-xl cursor-pointer">
+        <input type="checkbox" name="chose-plan" id="chose-plan" class="chose_plan w-6 h-6">
+        <div>
+          <h4 class="text-primary-Marineblue font-bold">Online service</h4>
+          <p class="text-secondry-Coolgray text-[12px]">Access to multiplayer games</p>
+        </div>
+        <strong class="text-[12px] text-secondry-Coolgray">+$1/mo</strong>
+      </div>
+
+      <div class="card border p-4 flex justify-between items-center rounded-xl my-3 cursor-pointer">
+        <input type="checkbox" name="chose-plan" id="chose-plan-two" class="chose_plan w-6 h-6">
+        <div>
+          <h4 class="text-primary-Marineblue font-bold">Larger storage</h4>
+          <p class="text-secondry-Coolgray text-[12px]">Extra 1TB of cloud save</p>
+        </div>
+        <strong class="text-[12px] text-secondry-Coolgray">+$2/mo</strong>
+      </div>
+
+      <div class="card border p-4 flex justify-between items-center rounded-xl cursor-pointer">
+        <input type="checkbox" name="chose-plan" id="chose-plan-three" class="chose_plan w-6 h-6">
+        <div>
+          <h4 class="text-primary-Marineblue font-bold">Customizable Profile</h4>
+          <p class="text-secondry-Coolgray text-[12px]">Custom theme on your profile</p>
+        </div>
+        <strong class="text-[12px] text-secondry-Coolgray">+$2/mo</strong>
+      </div>
+
+
+    </section>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <section
+      class="md:hidden  md:static md:w-auto md:translate-x-0 md:m-0 box bg-secondry-White p-6 w-[90%] m-auto rounded-xl absolute top-[6.5rem] left-[50%] translate-x-[-50%]  transition-all scale-0 duration-200">
+      <h2 class="text-3xl font-bold text-primary-Marineblue my-3">Finishing up</h2>
+      <p class="text-secondry-Coolgray mb-5">
+        Double-check everything looks OK before confirming.
+      </p>
+      <section class="step-4">
+
+      </section>
+
+
+    </section>
+
+
+    <button id="next_desktop" class="max-md:hidden mt-7 text-secondry-White p-2 rounded-md block float-right mr-6">Next
+      Step</button>
+  </section>
+</main>
+
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <section id="thank_you"
+      class=" bg-secondry-White p-6 w-[90%] h-[400px] m-auto rounded-xl absolute top-[6.5rem] left-[50%] translate-x-[-50%]  transition-all duration-200 flex justify-center items-center flex-col shadow-md scale-0">
+
+      <img class="w-[80px] mb-5" src="./assets/images/icon-thank-you.svg" alt="thank_you">
+
+      <h2 class="text-primary-Marineblue font-bold text-2xl mb-2">Thank you!</h2>
+      <p class="text-center text-secondry-Coolgray">
+        Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free
+        to email us at support@loremgaming.com.
+      </p>
+
+    </section>
+
+
+    <!-- Step 5 end -->
+    <section id="footer" class="md:hidden absolute bottom-0 bg-secondry-White w-full p-8 flex items-center">
+      <div id="previous" class="text-secondry-Coolgray cursor-pointer hover:text-primary-Marineblue">Go Back</div>
+      <button id="next" class=" text-secondry-White p-2 rounded-md block ml-auto">Next
+        Step</button>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <!-- JavaScript file  -->
+    <script src="./src/script.js"></script>
+  </body>
+
+</html>
